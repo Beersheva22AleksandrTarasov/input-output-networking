@@ -67,12 +67,8 @@ class InputOutputTest {
 	}
 
 	private void printNameFile(File item, int count) {
-		if (item.isFile()) {
-			System.out.printf("%s%s - file \n", "	".repeat(count), item.getName());
-		} else {
-			System.out.printf("%s%s - dir \n", "	".repeat(count), item.getName());
-		}
 
+		System.out.printf("%s%s - file \n", "	".repeat(count), item.getName(), item.isFile() ? "file" : "dir");
 	}
 
 	@Test
